@@ -1,0 +1,47 @@
+h1{
+    margin-left:40%;
+    color:rgb(6, 66, 90);  
+    font-size:40px;
+    font-family:poppins;
+    font-weight:bold;
+    margin-bottom:7%;
+    
+}
+#image-vis{
+    margin-left:20%;
+    margin-top:-3%;
+    width:70%;
+    height:90%;
+}                                                                                                                                                                                                  
+.departments{
+    margin-top:5%;
+    margin-left:17%;
+    display:flex;
+    margin-bottom:5%;
+}
+.btn{
+    width:120px;
+    height:40px;
+    color:white;
+    background-color:rgb(6, 66, 90);   
+    margin-bottom:20px;
+    font-size:17px;
+    border-radius:5px;
+    margin-right:30px;
+    font-weight:bold; 
+}
+.graph-com{
+    margin-left:15%;
+}
+
+.graph-com{
+    max-width:70%;
+    display:flex;
+}
+.count{
+    display:flex;
+    justify-content: space-between;
+}
+.counts-special{
+    display:flex;
+}

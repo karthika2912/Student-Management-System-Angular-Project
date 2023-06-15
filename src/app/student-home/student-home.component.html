@@ -1,0 +1,113 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+   
+    <h1 id="title-tag">STUDENT MANAGEMENT SYSTEM</h1>
+    <span class="menu-spacer"></span>
+    <div class="links">
+      <a mat-button (click)="navigateToSection2()"><mat-icon>event_available</mat-icon> Attendance </a> 
+      <a mat-button (click)="navigateToSection3()"><mat-icon>grade</mat-icon>Marks </a>
+      <a mat-button><mat-icon>person</mat-icon>{{studentName}}</a>
+      <a mat-button (click)="logout()">Logout<mat-icon>logout</mat-icon></a>                                                                                                     
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<br><br>
+<div class="section-1">
+  <div class="image-content">
+    <img id="img-1" src="https://cdn.dribbble.com/users/846207/screenshots/9192312/office-desk-animation.gif">
+  </div>
+  <div class="content">
+    <h1>Welcome {{studentName}}!!</h1>
+    <br><br>
+    <p>We are delighted to have you on board our Student Management System, your one-stop destination for all your academic needs. Whether you're a new student just joining our institution or a returning student, this platform is designed to simplify your academic journey and enhance your learning experience.
+
+     <br> <br>Here, you'll find a wealth of resources and tools to support your educational endeavors. From course schedules and assignments to grades and important announcements, everything you need to succeed is just a few clicks away. Our Student Management System is designed to provide you with a seamless and user-friendly interface, ensuring that you can easily navigate and access the information you require.</p>
+  </div>
+
+</div>
+
+<div class="section-2" #section2>
+
+<div class="student_wise_att">
+    <br> <br><br><br><br>
+    <h5><b>CURRENT ATTENDANCE</b></h5>
+    <br><br>
+    <table border="1">
+      <tr>
+        <th>DATE</th>
+        <th>FIRST</th>
+        <th>SECOND</th>
+        <th>THIRD</th>
+        <th>FOURTH</th>
+        <th>FIFTH</th>
+        <th>PRESENT</th>
+        <th>ABSENT</th>
+      </tr>
+
+      <tr *ngFor="let obj of stud_att_list">
+          <td>{{obj.date}}</td>
+          <td [ngStyle]="{'background-color': obj.first_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.first_hour}}</td>
+          <td [ngStyle]="{'background-color': obj.second_hour=='P' ? 'white' : '#EE82EE'}">{{obj.second_hour}}</td>
+          <td [ngStyle]="{'background-color': obj.third_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.third_hour}}</td>
+          <td [ngStyle]="{'background-color': obj.fourth_hour=='P' ? 'white' : '#EE82EE'}">{{obj.fourth_hour}}</td>
+          <td [ngStyle]="{'background-color': obj.fifth_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.fifth_hour}}</td>
+          <td>{{obj.present}}</td>
+          <td>{{obj.absent}}</td>
+      </tr>
+
+    </table>
+   <br>
+     
+
+      <table border="1" id="stats">
+        <tr>
+          <th>Total Present</th>
+          <th>Total Absent</th>
+          <th>Total Classes</th>
+        </tr>
+        <tr>
+          <td>{{total_present_count}}</td>
+          <td>{{total_absent_count}}</td>
+          <td>{{total_absent_count+total_present_count}}</td>
+        </tr>
+      </table>
+     
+      <h3>Attendance Percentage : <b>{{final_attendance|number: '1.2-2'}}%</b></h3>
+  </div>
+  <div class="att-img">
+    <img id="att-image" src="https://cdn.dribbble.com/users/3874609/screenshots/11220080/media/f79eb10c253049df5e1a184be4c70567.gif">
+  </div>
+</div>
+<div class="section-3" #section3>
+      <div class="results">
+        <h2><b>MARKS SHEET</b></h2>
+        <br>  
+        <table border="1">
+            <tr>
+                <th>Course Name</th>
+                <th>Sessional</th>
+                <th>External</th>
+                <th>Total</th>
+            </tr>
+            <tr *ngFor="let objs of result_list; let i=index;">
+                <td>{{course_list[i]}}</td>
+                <td>{{objs.sessional}}</td>
+                <td>{{objs.external}}</td>
+                <td>{{objs.sessional+objs.external}}</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{sessional_total}}</td>
+                <td>{{external_total}}</td>
+                <td>{{sessional_total+external_total}}</td>
+            </tr>
+        </table><br>
+        <h5>Percentage : <b>{{percentage}}%</b></h5>
+    </div>
+    <div class="att-img">
+      <img id="att-image-2" src="https://cdn.dribbble.com/users/1079204/screenshots/15845625/media/a8f2ea854fc402d02f54c7fb35b83c93.gif">
+    </div>
+</div>

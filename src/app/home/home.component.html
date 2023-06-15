@@ -1,0 +1,160 @@
+<router-outlet></router-outlet>
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+   
+    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <span class="menu-spacer"></span>
+    <div class="links">
+      <a mat-button (click)="navigateToSection2()"> Add Student <mat-icon>add</mat-icon></a>
+      <a mat-button (click)="navigateToSection3()"><mat-icon>show_chart</mat-icon>Dashboard </a>
+      <a mat-button (click)="navigateToSection4()"><mat-icon>event_available</mat-icon> Attendance </a>
+      <a mat-button (click)="navigateToSection5()"><mat-icon>grade</mat-icon>Marks </a>
+      <a mat-button (click)="navigateToSection6()"><mat-icon>list</mat-icon>Students</a>
+      <a mat-button (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout </a>
+      <a mat-button><mat-icon>person</mat-icon>ADMIN</a>                                                                                                       
+    </div>
+  </mat-toolbar-row>
+
+  
+</mat-toolbar>
+<div class="section-1">
+  <div class="image-content">
+      <img id="sec1-image" src="https://mintbook.com/assetsNew/img/animated2.gif">
+  </div>
+  <div class="content">
+    <h1>Welcome to the Admin Panel!</h1>
+    <p>We are thrilled to have you on board as the administrator of our platform. Your role is crucial in ensuring a smooth and efficient management of our students' information and academic records.
+    <br><br>As the administrator, you hold the key to maintaining the integrity and security of our student database. Your dedication and expertise will contribute significantly to the success of our educational institution. Whether it's enrolling new students, updating existing records, or generating reports, your responsibilities play a vital role in keeping our system running seamlessly.</p>
+  </div>
+</div>
+
+<div class="section-2" #section2>
+  <br>
+  <h1 id="reg_stu">REGISTER STUDENT</h1>
+  <br>
+  <div class="inner-section-2">
+    <div class="image-content">
+      <img id="sec2-image" src="https://cdn.dribbble.com/users/2520294/screenshots/7269423/media/8db02365a1363822ae9f0554cf3d4469.gif">
+  </div>
+      <div class="details">
+        <form [formGroup]="studentForm">
+          <mat-stepper orientation="vertical">
+            <mat-step>
+              <ng-template matStepLabel>Fill the Basic Details</ng-template>
+              <ng-template matStepContent>
+                <mat-form-field>
+                  <mat-label>First Name</mat-label>
+                  <input matInput placeholder="First name" formControlName="firstname" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                  <mat-label>Last Name</mat-label>
+                  <input matInput placeholder="Last name" formControlName="lastname" required>
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                  <mat-label>Date of Birth</mat-label>
+                  <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="dob">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>  
+                <br>
+              <mat-form-field>
+                  <mat-label>Gender</mat-label>
+                  <mat-select formControlName="gender">
+                    
+                    <mat-option value="f">Female</mat-option>
+                    <mat-option value="m">Male</mat-option>
+                    <mat-option value="o">Others</mat-option>
+                    
+                  </mat-select>
+              </mat-form-field>
+                <br>
+                <button mat-button matStepperNext>Next</button>
+              </ng-template>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Fill the Education Details</ng-template>
+              <ng-template matStepContent>
+                <br>
+                <mat-form-field>
+                  <mat-label>Roll Number</mat-label>
+                  <input matInput placeholder="Roll Number" placeholder="1602-19-737-016" formControlName="roll" required>
+                </mat-form-field>
+                <h4>Choose Department</h4>
+                  <mat-form-field>
+                    <mat-label>Department</mat-label>
+                    <mat-select formControlName="department">
+                      <mat-option *ngFor="let option of departmentOptions; let i=index;" value="{{departmentOptions[i]}}">{{option}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </ng-template>
+            </mat-step>
+            <mat-step>
+              <ng-template matStepLabel>Submit</ng-template>
+              <p>Click the below Button to Submit the Details</p>
+              <button mat-button (click)="addStudent()">Submit</button>
+            </mat-step>
+          </mat-stepper>
+        </form>
+      </div>
+     
+</div>
+</div>
+<br><br>
+<div class="section-3" #section3>
+  <br><br><br><br><br><br>
+  <app-dashboard></app-dashboard>
+</div>
+<br><br>
+<div class="section-4" #section4>
+  <br><br>
+<app-attendance></app-attendance>
+</div>
+<div class="section-5" #section5>
+  <br><br><br><br>
+  <app-marks></app-marks>
+</div>
+
+
+<div class="section-6" #section6>
+  <div class="toolbar">
+    
+  
+    
+    <div class="search-student">
+     
+      <input type="search" placeholder="Search Student" (input)="searchStudent(searchInput.value)" #searchInput>
+      <br>
+      <div class="search-icon">
+        <mat-icon>search</mat-icon>
+      </div>
+      
+      
+                                                                                        
+    </div>
+    
+  </div>
+
+  <div class="students" *ngIf="students.length==0">
+    <p>There are no students added yet!</p>
+  </div>
+
+  <div *ngFor="let student of studentsToDisplay; let stud_id=index;">
+  <div class="col">
+    <app-student [student]="student" (deleteStudent)="removeStudent($event)" (editStudent)="editStudent($event)"></app-student>
+  </div>  
+  </div>
+  
+  
+
+</div>
+

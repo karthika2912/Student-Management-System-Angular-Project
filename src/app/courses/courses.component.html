@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button routerLink="/home">
+      <mat-icon>home</mat-icon>
+    </button>
+   
+    <h1 id="title">STUDENT MANAGEMENT SYSTEM</h1>
+    <span class="menu-spacer"></span>
+    <div class="links">
+      <a mat-button><mat-icon>person</mat-icon>ADMIN</a>   
+      <a mat-button><mat-icon>book</mat-icon>Courses : <b>{{courseCount}}</b></a>                                                                                                       
+    </div>
+  </mat-toolbar-row>
+  </mat-toolbar>
+<div class="main">
+<div class="title">
+    COURSES PAGE
+</div>
+
+
+</div>
+<br><br>
+<div class="selected-list" *ngIf="selectedCourses.length>0">
+  
+  <h4><b>Enrolled Courses</b></h4>
+  <div *ngFor="let c of selectedCourses">
+    
+  <button id="sel-course" class="fade-in-item"><b>{{c}}</b></button><br>
+</div>
+  
+
+</div>
+
+<br><br>
+<div class="courses" class="fade-in-item">
+  <div *ngFor="let course of courses_display">
+    <mat-card *ngIf="!selectedCourses.includes(course.course_title)">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon id="course-icon">book</mat-icon><h1 id="crs"><b>{{course.course_title|uppercase}}</b></h1>
+          
+        </mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+       <div>
+        <img src="assets/image.png">
+       </div>
+       <div class="card-content">
+        <h2>Three Months Course</h2>
+        <h3>Total 180 Hours with three assessments and One Grand Assessment</h3>
+        <div class="buttons">
+        <button id="enroll" (click)="selectCourse(course.course_title)" [disabled]="isSelected(course.course_title)"><b>ENROLL</b></button>
+        
+        </div>
+       </div>
+       
+      </mat-card-content>
+      <mat-card-actions>
+        
+        
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+

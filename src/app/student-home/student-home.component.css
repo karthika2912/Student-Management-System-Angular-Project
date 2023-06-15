@@ -1,0 +1,111 @@
+th,td{
+
+    text-align:center;
+    vertical-align:center;
+    border: 1px solid #ccc;
+    width:200px;
+    padding:8px;
+    font-weight:bold;
+    color:white;
+}
+th{
+    background-color:rgb(6, 66, 90);                                                                                                                                                    
+}
+td{
+   
+    background-color:white;
+    color:rgb(6, 66, 90); 
+    
+}
+h5,h3,h2{
+    color:rgb(6, 66, 90); 
+    font-size:30px;
+   
+    margin-top:20px;
+}
+h5{
+    margin-left:250px;
+}
+h3{
+    margin-left:200px;
+}
+h2{
+    margin-left:330px;
+}
+table{
+    width:100%;
+}
+.student_wise_att{
+
+    margin-left:2%;
+    width: 250%;
+}
+.results{
+    width: 150%;
+    margin-left:5%;
+}
+.mat-toolbar{
+    
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 3px;
+        background-color:rgb(6, 66, 90);
+        margin-bottom:10%;
+        z-index: 999;
+    
+
+}
+
+#title-tag{
+    margin-top:1.5%;
+}
+.links{
+    margin-left:30%;
+}
+.section-1{
+    margin-top:10%;
+    display:flex;
+    justify-content:space-between;
+}
+#img-1{
+    width:80%;
+    height:100%;
+    margin-left:5%;
+}
+p{
+    color:rgb(6, 66, 90); 
+    font-family: poppins;
+    font-size:15px;
+}
+.content h1{
+    color:rgb(6, 66, 90); 
+    font-size:30px;
+    font-family:poppins
+
+}
+.content{
+
+    width:70%;
+    margin-right:3%;
+   
+}
+.section-2{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10%;
+}
+.section-3{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10%;
+}
+#att-image{
+    width:100%;
+    margin-top:40%;
+}
+#att-image-2{
+    width:100%;
+
+}

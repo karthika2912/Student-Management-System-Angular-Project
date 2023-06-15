@@ -1,0 +1,27 @@
+
+    <div class="login">
+            <h1>LOGIN PAGE</h1>
+            <mat-icon>lock</mat-icon>
+            
+            <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+            <div class="box">
+                <br>
+                    <form class="example-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                        
+                        <mat-form-field class="example-full-width">
+                          <mat-label><mat-icon>person</mat-icon>  Username</mat-label>
+                          <input matInput placeholder="Enter Username" formControlName="email">
+                        </mat-form-field>
+                      
+                        <mat-form-field class="example-full-width">
+                          <mat-label><mat-icon>password</mat-icon> Password</mat-label>
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                        </mat-form-field>
+                        <br>
+                        <input type="submit">
+                        <br>
+                        <br>
+                      
+                      </form> 
+            </div>
+    </div>

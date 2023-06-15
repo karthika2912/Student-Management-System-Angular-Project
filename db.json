@@ -1,0 +1,759 @@
+{
+  "posts": [
+    {
+      "firstname": "Karthika",
+      "lastname": "Pappula",
+      "dob": "2021-03-12",
+      "gender": "f",
+      "department": "IT",
+      "id": 1
+    },
+    {
+      "firstname": "Pallavi",
+      "lastname": "Suma",
+      "dob": "2001-12-29",
+      "gender": "f",
+      "department": "ECE",
+      "id": 2
+    },
+    {
+      "firstname": "Mithun",
+      "lastname": "Kumar",
+      "dob": "2021-04-13",
+      "gender": "m",
+      "department": "CSE",
+      "id": 3
+    }
+  ],
+  "courses": [
+    {
+      "name": "Artificial Intelligence",
+      "stud_id": "10",
+      "id": 1
+    },
+    {
+      "name": "Neural Networks",
+      "stud_id": "10",
+      "id": 2
+    },
+    {
+      "name": "Crypotgraphy",
+      "stud_id": "10",
+      "id": 3
+    },
+    {
+      "name": "Block Chain",
+      "stud_id": "10",
+      "id": 4
+    },
+    {
+      "name": "Natural Language Processing",
+      "stud_id": "13",
+      "id": 5
+    },
+    {
+      "name": "Computer Networks",
+      "stud_id": "13",
+      "id": 6
+    },
+    {
+      "name": "Cyber Security",
+      "stud_id": "13",
+      "id": 7
+    },
+    {
+      "name": "Software Management System",
+      "stud_id": "13",
+      "id": 8
+    },
+    {
+      "name": "Operating Systems",
+      "stud_id": "13",
+      "id": 9
+    },
+    {
+      "name": "Natural Language Processing",
+      "stud_id": "14",
+      "id": 10
+    },
+    {
+      "name": "Data Structures and Algorithms",
+      "stud_id": "14",
+      "id": 11
+    },
+    {
+      "name": "Computer Networks",
+      "stud_id": "14",
+      "id": 12
+    },
+    {
+      "name": "Object-Oriented Programming",
+      "stud_id": "13",
+      "id": 13
+    },
+    {
+      "name": "Computer Vision",
+      "stud_id": "13",
+      "id": 14
+    },
+    {
+      "name": "Database Management Systems",
+      "stud_id": "13",
+      "id": 15
+    },
+    {
+      "name": "Analog Communication",
+      "stud_id": "15",
+      "id": 16
+    },
+    {
+      "name": "Digital Communication",
+      "stud_id": "15",
+      "id": 17
+    },
+    {
+      "name": "Embedded System Design",
+      "stud_id": "15",
+      "id": 18
+    },
+    {
+      "name": "Deep Learning",
+      "stud_id": "10",
+      "id": 19
+    },
+    {
+      "name": "Virtual Reality",
+      "stud_id": "10",
+      "id": 20
+    },
+    {
+      "name": "Irrigation Engineering",
+      "stud_id": "12",
+      "id": 21
+    },
+    {
+      "name": "Strength of material",
+      "stud_id": "12",
+      "id": 22
+    },
+    {
+      "name": "Concrete Technology and RCC",
+      "stud_id": "12",
+      "id": 23
+    },
+    {
+      "name": "Computer Networks",
+      "stud_id": "1",
+      "id": 24
+    },
+    {
+      "name": "Cyber Security",
+      "stud_id": "1",
+      "id": 25
+    },
+    {
+      "name": "Database Management Systems",
+      "stud_id": "1",
+      "id": 26
+    },
+    {
+      "name": "Computer Vision",
+      "stud_id": "1",
+      "id": 27
+    },
+    {
+      "name": "Neural Networks",
+      "stud_id": "3",
+      "id": 28
+    },
+    {
+      "name": "Discrete Mathematics",
+      "stud_id": "3",
+      "id": 29
+    },
+    {
+      "name": "Deep Learning",
+      "stud_id": "3",
+      "id": 30
+    },
+    {
+      "name": "Virtual Reality",
+      "stud_id": "3",
+      "id": 31
+    },
+    {
+      "name": "Crypotgraphy",
+      "stud_id": "3",
+      "id": 32
+    },
+    {
+      "name": "Data Mining",
+      "stud_id": "3",
+      "id": 33
+    },
+    {
+      "name": "Software Management System",
+      "stud_id": "1",
+      "id": 34
+    },
+    {
+      "name": "Operating Systems",
+      "stud_id": "1",
+      "id": 35
+    },
+    {
+      "name": {
+        "id": 53,
+        "course_title": "Fluid Mechanics",
+        "department_name": 9
+      },
+      "stud_id": "42",
+      "id": 36
+    }
+  ],
+  "subjects": [
+    {
+      "dept": "IT",
+      "courses": [
+        "Software Management System",
+        "Computer Vision",
+        "Operating Systems",
+        "Computer Networks",
+        "Natural Language Processing",
+        "Cyber Security",
+        "Data Structures and Algorithms",
+        "Database Management Systems",
+        "Object-Oriented Programming"
+      ]
+    },
+    {
+      "dept": "CSE",
+      "courses": [
+        "Block Chain",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Neural Networks",
+        "Deep Learning",
+        "Discrete Mathematics",
+        "Crypotgraphy",
+        "Virtual Reality",
+        "Data Mining"
+      ]
+    },
+    {
+      "dept": "ECE",
+      "courses": [
+        "Analog Communication",
+        "Signals & Systems",
+        "Control Systems",
+        "Digital Signal Processing",
+        "Microprocessors",
+        "Digital Communication",
+        "Wireless Communication",
+        "Digital Switching Systems",
+        "Embedded System Design"
+      ]
+    },
+    {
+      "dept": "EEE",
+      "courses": [
+        "Electrical Engineering Materials",
+        "Power System",
+        "Control Engineering",
+        "Digital Electronics",
+        "Power Electronics",
+        "Digital Signal Processing",
+        "Electrical Drives",
+        "Advanced Control Systems",
+        "VLSI Design"
+      ]
+    },
+    {
+      "dept": "CIVIL",
+      "courses": [
+        "Engineering Drawing",
+        "Concrete Technology and RCC",
+        "Railway Tunnel and Harbor",
+        "Irrigation Engineering",
+        "Estimating and Costing",
+        "Strength of material",
+        "Construction Technology",
+        "Engineering Mathematics ",
+        "Surveying"
+      ]
+    },
+    {
+      "dept": "MECH",
+      "courses": [
+        "Fluid mechanics",
+        "Mechatronics",
+        "Thermodynamics",
+        "Industrial engineering",
+        "Solid mechanics",
+        "Applied mechanics",
+        "Dynamics",
+        "Mechanics",
+        "Thermal engineering"
+      ]
+    }
+  ],
+  "attendance": [
+    {
+      "date": "2021-02-12",
+      "first": false,
+      "second": false,
+      "third": true,
+      "fourth": true,
+      "fifth": false,
+      "name": "jhon",
+      "present": 2,
+      "absent": 3,
+      "id": 11
+    },
+    {
+      "date": "2021-02-13",
+      "first": false,
+      "second": true,
+      "third": false,
+      "fourth": true,
+      "fifth": true,
+      "name": "jhon",
+      "present": 3,
+      "absent": 2,
+      "id": 12
+    },
+    {
+      "date": "2021-03-12",
+      "first": true,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": false,
+      "name": "jhon",
+      "present": 4,
+      "absent": 1,
+      "id": 13
+    },
+    {
+      "date": "2021-12-30",
+      "first": false,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "jhon",
+      "present": 4,
+      "absent": 1,
+      "id": 14
+    },
+    {
+      "date": "2021-12-31",
+      "first": true,
+      "second": false,
+      "third": true,
+      "fourth": true,
+      "fifth": false,
+      "name": "jhon",
+      "present": 3,
+      "absent": 2,
+      "id": 15
+    },
+    {
+      "date": "2021-03-31",
+      "first": true,
+      "second": false,
+      "third": true,
+      "fourth": false,
+      "fifth": true,
+      "name": "jhon",
+      "present": 3,
+      "absent": 2,
+      "id": 16
+    },
+    {
+      "date": "2021-12-08",
+      "first": true,
+      "second": false,
+      "third": true,
+      "fourth": true,
+      "fifth": false,
+      "name": "subbu",
+      "present": 3,
+      "absent": 2,
+      "id": 17
+    },
+    {
+      "date": "2021-02-23",
+      "first": false,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "jhon",
+      "present": 4,
+      "absent": 1,
+      "id": 18
+    },
+    {
+      "date": "2021-02-12",
+      "first": false,
+      "second": true,
+      "third": true,
+      "fourth": false,
+      "fifth": true,
+      "name": "asdfg",
+      "present": 3,
+      "absent": 2,
+      "id": 19
+    },
+    {
+      "date": "2021-03-12",
+      "first": false,
+      "second": true,
+      "third": false,
+      "fourth": true,
+      "fifth": false,
+      "name": "Ravi",
+      "present": 2,
+      "absent": 3,
+      "id": 20
+    },
+    {
+      "date": "2023-02-12",
+      "first": false,
+      "second": true,
+      "third": true,
+      "fourth": false,
+      "fifth": true,
+      "name": "jhon",
+      "present": 3,
+      "absent": 2,
+      "id": 21
+    },
+    {
+      "date": "2021-03-12",
+      "first": true,
+      "second": true,
+      "third": false,
+      "fourth": true,
+      "fifth": false,
+      "name": "Mamatha",
+      "present": 3,
+      "absent": 2,
+      "id": 22
+    },
+    {
+      "date": "2023-06-01",
+      "first": true,
+      "second": false,
+      "third": true,
+      "fourth": false,
+      "fifth": true,
+      "name": "Mamatha",
+      "present": 3,
+      "absent": 2,
+      "id": 23
+    },
+    {
+      "date": "2021-12-23",
+      "first": false,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "Mamatha",
+      "present": 4,
+      "absent": 1,
+      "id": 24
+    },
+    {
+      "date": "2021-12-24",
+      "first": true,
+      "second": false,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "Mamatha",
+      "present": 4,
+      "absent": 1,
+      "id": 25
+    },
+    {
+      "date": "2021-12-31",
+      "first": true,
+      "second": true,
+      "third": true,
+      "fourth": false,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 4,
+      "absent": 1,
+      "id": 26
+    },
+    {
+      "date": "2021-12-30",
+      "first": true,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 5,
+      "absent": 0,
+      "id": 27
+    },
+    {
+      "date": "2023-06-01",
+      "first": false,
+      "second": true,
+      "third": false,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 3,
+      "absent": 2,
+      "id": 28
+    },
+    {
+      "date": "2023-06-02",
+      "first": true,
+      "second": true,
+      "third": null,
+      "fourth": null,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 6,
+      "absent": 4,
+      "id": 29
+    },
+    {
+      "date": "2022-03-12",
+      "first": true,
+      "second": false,
+      "third": false,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 3,
+      "absent": 2,
+      "id": 30
+    },
+    {
+      "date": "2021-04-12",
+      "first": null,
+      "second": true,
+      "third": null,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 6,
+      "absent": 4,
+      "id": 31
+    },
+    {
+      "date": "2021-02-23",
+      "first": false,
+      "second": false,
+      "third": false,
+      "fourth": false,
+      "fifth": false,
+      "name": "Karthika",
+      "present": 0,
+      "absent": 5,
+      "id": 32
+    },
+    {
+      "date": "2021-03-25",
+      "first": null,
+      "second": true,
+      "third": true,
+      "fourth": null,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 3,
+      "absent": 7,
+      "id": 33
+    },
+    {
+      "date": "2021-04-25",
+      "first": false,
+      "second": true,
+      "third": false,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 3,
+      "absent": 2,
+      "id": 34
+    },
+    {
+      "date": "2021-12-12",
+      "first": true,
+      "second": true,
+      "third": true,
+      "fourth": true,
+      "fifth": true,
+      "name": "Karthika",
+      "present": 5,
+      "absent": 0,
+      "id": 35
+    },
+    {
+      "student": 42,
+      "date": "2021-12-29",
+      "first_hour": "P",
+      "second_hour": "P",
+      "third_hour": "A",
+      "fourth_hour": "P",
+      "fifth_hour": "P",
+      "present": 4,
+      "absent": 1,
+      "id": 36
+    }
+  ],
+  "marks": [
+    {
+      "sessional": 23,
+      "external": 56,
+      "course": "Strength of material",
+      "stud_id": 12,
+      "id": 1
+    },
+    {
+      "sessional": 25,
+      "external": 56,
+      "course": "Computer Networks",
+      "stud_id": 14,
+      "id": 2
+    },
+    {
+      "sessional": 18,
+      "external": 34,
+      "course": "Embedded System Design",
+      "stud_id": 15,
+      "id": 3
+    },
+    {
+      "sessional": 25,
+      "external": 45,
+      "course": "Digital Communication",
+      "stud_id": 15,
+      "id": 4
+    },
+    {
+      "sessional": 25,
+      "external": 56,
+      "course": "Natural Language Processing",
+      "stud_id": 14,
+      "id": 5
+    },
+    {
+      "sessional": 23,
+      "external": 55,
+      "course": "Artificial Intelligence",
+      "stud_id": 10,
+      "id": 6
+    },
+    {
+      "sessional": 34,
+      "external": 44,
+      "course": "Neural Networks",
+      "stud_id": 10,
+      "id": 7
+    },
+    {
+      "sessional": 38,
+      "external": 40,
+      "course": "Irrigation Engineering",
+      "stud_id": 12,
+      "id": 8
+    },
+    {
+      "sessional": 38,
+      "external": 55,
+      "course": "Crypotgraphy",
+      "stud_id": 10,
+      "id": 9
+    },
+    {
+      "sessional": 35,
+      "external": 45,
+      "course": "Virtual Reality",
+      "stud_id": 10,
+      "id": 10
+    },
+    {
+      "sessional": 23,
+      "external": 45,
+      "course": "Operating Systems",
+      "stud_id": 1,
+      "id": 11
+    },
+    {
+      "sessional": 30,
+      "external": 45,
+      "course": "Natural Language Processing",
+      "stud_id": 1,
+      "id": 12
+    },
+    {
+      "sessional": 30,
+      "external": 45,
+      "course": "Neural Networks",
+      "stud_id": 3,
+      "id": 13
+    },
+    {
+      "sessional": 30,
+      "external": 45,
+      "course": "Discrete Mathematics",
+      "stud_id": 3,
+      "id": 14
+    },
+    {
+      "sessional": 30,
+      "external": 55,
+      "course": "Computer Networks",
+      "stud_id": 1,
+      "id": 15
+    }
+  ],
+  "topics": [
+    {
+      "course": "Block Chain",
+      "topics": [
+        "Decentralization",
+        "Immutability",
+        "Automation"
+      ]
+    },
+    {
+      "course": "Artificial Intelligence",
+      "topics": [
+        "Machine Learning",
+        "NLP",
+        "Deep Learning"
+      ]
+    },
+    {
+      "course": "Machine Learning",
+      "topics": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement"
+      ]
+    },
+    {
+      "course": "others",
+      "topics": [
+        "UNIT-1",
+        "UNIT-2",
+        "UNIT-3"
+      ]
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

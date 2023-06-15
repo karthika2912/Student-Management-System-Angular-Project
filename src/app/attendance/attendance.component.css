@@ -1,0 +1,202 @@
+h1{
+    margin-left:35%;
+    margin-top:5%;
+    font-size:40px;
+    font-family:poppins;
+    font-weight:bold;
+    color:rgb(6, 66, 90); 
+}
+#title{
+    color:white;
+    margin-left:1%;
+}
+.stu-btn-list{
+    background-color:rgb(6, 66, 90); 
+    height:40px;
+    width: 150px;
+    color:white;
+    font-family:poppins;
+    border-radius:5px;
+    border:2px solid white;
+}
+#image-vis{
+    margin-left:20%;
+    margin-top:-3%;
+    width:70%;
+    height:90%;
+}
+.att{
+
+    width:800px;
+    height:auto;
+    margin-left:10%;
+}
+.combined{
+    display:flex;
+    margin-top:40px;
+}
+h2{
+    margin-left:25%;
+    margin-top:40px;
+    color:rgb(6, 66, 90); 
+}
+#sdate{
+    margin-left:320px;
+    
+    color:rgb(6, 66, 90); 
+}
+
+#sub{
+    margin-left:220px;
+    margin-top:30px;
+    width:100px;
+    height:40px;
+    color:rgb(6, 66, 90); 
+    background-color:white;
+    border-radius:5px;
+    border:2px solid white;
+}
+#subm{
+    margin-left:0px;
+    margin-bottom:3px;
+    width:40px;
+    height:40px; 
+    background-color:rgb(6, 66, 90); 
+}
+h3{
+    margin-left:300px;
+    margin-top:20px;
+    color:rgb(6, 66, 90); 
+}
+.student{
+    margin-left:50px;
+}
+input[type="date"]{
+    width:200px;
+}
+
+p{
+    margin-left:400px;
+    color:rgb(6, 66, 90); 
+}
+
+.student_wise_att{
+    width:1000px;
+    height:auto;
+    border:3px solid rgb(6, 66, 90); 
+    padding:30px;
+    margin-left: 150px;
+    margin-bottom:100px;
+}
+h5{
+    color:rgb(6, 66, 90); 
+    margin-left:350px;
+    font-size:30px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+th,td{
+
+    text-align:center;
+    vertical-align:center;
+    border: 1px solid #ccc;
+    width:200px;
+    padding:8px;
+    font-weight:bold;
+    color:white;
+}
+th{
+    background-color:rgb(6, 66, 90);                                                                                                                                               
+}
+td{
+   
+    background-color:white;
+    color:rgb(6, 66, 90); 
+    
+}
+#stats{
+    margin-left:200px;
+}
+#view{
+    width:100px;
+    height:40px;
+    border-radius: 20px;
+    background-color: rgb(224, 25, 92);
+    color:white;
+    border:2px solid white;
+    margin-right:20px;
+    margin-left:220px;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+.display{
+    width:70%;
+    margin-left:330px;
+    margin-top:-250px;
+}
+.display table{
+    width:100%;
+}
+
+.entire-att{
+    
+    margin-left:600px;
+}
+h6{
+    margin-left:300px;
+    font-size:20px;
+    color:rgb(6, 66, 90); 
+}
+.links{
+    margin-left:530px;
+}
+a{
+    margin-right:30px;
+}
+h4{
+    margin-left:25%;
+    font-size:20px;
+    color:rgb(6, 66, 90); 
+}
+input[type="date"]{
+    height:40px;
+    width: 300px;
+    border:2px solid rgb(6, 66, 90); 
+   
+    padding:10px;
+    margin-left:300px;
+}
+
+.search-date{
+    margin-left:596px;
+    margin-top:-40px;
+   
+}
+#searchDate{
+    color:white;
+}
+mat-card{
+    width:600px;
+    height:auto;
+    background-color:rgb(6, 66, 90); 
+}
+mat-card-header{
+    background-color:rgb(6, 66, 90); 
+    color:white;
+}
+#att-date{
+    margin-top:30px;
+    margin-left:140px;
+    margin-bottom:50px;
+}
+mat-card-title{
+    margin-left:220px;
+}  
+
+input[type="checkbox"]{
+    margin-left:220px;
+    
+}
+label{
+    color:white;
+}

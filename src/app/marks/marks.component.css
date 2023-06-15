@@ -1,0 +1,134 @@
+.title{
+    
+    margin-top:20px;
+    color:rgb(6, 66, 90); 
+}
+.title h1{
+    margin-left:45%;
+    margin-top:5%;
+    font-size:40px;
+    font-family:poppins;
+    font-weight:bold;
+    color:rgb(6, 66, 90); 
+}
+#image-vis{
+    margin-left:20%;
+    margin-top:0%;
+    width:100%;
+    height:70%;
+}
+#title{
+    margin-top:15px;
+}
+.combined{
+    display: flex;
+}
+.stu-list-btn{
+    background-color:rgb(6, 66, 90); 
+    height:40px;
+    width: 150px;
+    color:white;
+    font-family:poppins;
+    border-radius:5px;
+    border:2px solid white;
+}
+.stu-list{
+    margin-left:50px;
+    margin-top:50px;
+}
+/*button{
+    background-color:forestgreen;
+    height:40px;
+    width: 150px;
+    color:white;
+    font-family:poppins;
+    border-radius:20px;
+    border:2px solid white;
+}*/
+#heading{
+    color:rgb(6, 66, 90); 
+    margin-left:0px;
+    font-size:25px;
+}
+.course{
+    margin-top:20px;
+    margin-left:100px;
+}
+.course-btn{
+    background-color:rgb(231, 110, 191);
+    height:60px;
+    width: 250px;
+    color:white;
+    font-family:poppins;
+    border-radius:10px;
+    border:2px solid white;
+}
+.marks{
+    margin-left:100px;
+    margin-top:40px;
+    
+}
+label{
+    font-size:20px;
+    margin-right:5px;
+}
+h3{
+    font-size:35px;
+    color:rgb(92, 200, 204);
+}
+.form{
+    margin-left:10px;
+}
+th,td{
+
+    text-align:center;
+    vertical-align:center;
+    border: 1px solid #ccc;
+    width:200px;
+    padding:8px;
+    font-weight:bold;
+    color:white;
+}
+th{
+    background-color:rgb(6, 66, 90);                                                                                                                                                 
+}
+td{
+   
+    background-color:white;
+    color:rgb(6, 66, 90); 
+    
+}
+.results{
+    margin-left:400px;
+    margin-top:-230px;
+}
+
+.course{
+    margin-top:80px;
+    margin-left:50px;
+}
+.inner-block{
+    display:flex;
+}
+#view{
+    margin-left:10px;
+    width:40px;
+    height:40px;
+    color:rgb(6, 66, 90);   
+    background-color:rgb(172, 172, 241);    
+    margin-bottom:20px;
+    font-size:17px;
+    border-radius:20px;
+    border:3px solid rgb(6, 66, 90);  
+ 
+    font-weight:bold; 
+}
+h4,h2{
+    color:rgb(6, 66, 90); 
+}
+.links{
+    margin-left:600px;
+}
+#marks-head{
+    margin-left:200px;
+}

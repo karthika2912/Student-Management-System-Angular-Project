@@ -1,0 +1,161 @@
+
+<div class="main">
+    <div class="title">
+        <h1><b>ATTENDANCE PAGE</b></h1>
+    </div>
+    <div class="entire-att">
+      <form [formGroup]="searchForm" (ngSubmit)="onSubmitEntire()">
+        <input type="date" formControlName="searchDate">
+        <div class="search-date">
+          <button type="submit" id="subm"><mat-icon id="searchDate">search</mat-icon></button>
+        </div>
+        
+      </form>
+    </div>
+    <div class="combined">
+      
+        <div class="student">
+          <h4>SELECT</h4>
+            <div *ngFor="let stud of students">
+  
+                <mat-list>
+                  <mat-list-item>
+                    <button class="stu-btn-list" (click)="loadStudent(stud.firstname)">{{stud.firstname}}</button>
+                  </mat-list-item>
+                </mat-list>
+                
+            </div>
+        </div>
+       <div class="image-con" *ngIf="!isDivVisible">
+          <img id="image-vis" src="https://videoigniter.com/wp-content/uploads/2022/12/Animated-Explainer-Video-Production-Questionnaire-1.jpg">
+       </div>
+        <div class="att" *ngIf="isDivVisible">
+          
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title>  {{student_name|uppercase}} </mat-card-title>
+              <mat-card-subtitle></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+             
+                <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                 
+                  <input id="att-date" type="date" formControlName="date" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['date']['errors'] }"  [(ngModel)]="selectedDate" (change)="checkDate(selectedDate)"/>
+                        <div *ngIf="submitted && f['date'].errors" class="invalid-feedback">
+                            <div *ngIf="f['date'].errors['required']">Date of Birth is required</div>
+                            <div *ngIf="f['date'].errors['pattern']">Date of Birth must be a valid date in the format YYYY-MM-DD</div>
+                        </div>
+          
+                   <!-- <input type="date" formControlName="date"><br><br>-->
+                    <label>
+          
+                      <input type="checkbox" formControlName="myCheckbox1">
+                      First-Hour
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" formControlName="myCheckbox2">
+                        Second-Hour
+                      </label>
+                      <br>
+                      <label>
+                        <input type="checkbox" formControlName="myCheckbox3">
+                        Third-Hour
+                      </label>
+                      <br>
+                      <label>
+                        <input type="checkbox" formControlName="myCheckbox4">
+                        Fourth-Hour
+                      </label>
+                      <br>
+                      <label>
+                        <input type="checkbox" formControlName="myCheckbox5">
+                        Fifth-Hour
+                      </label>
+                      <br>
+                    <button type="submit" id="sub"><b>SUBMIT</b></button>
+                    </form>
+                
+                <button id="view" (click)="showDiv()">View</button>
+           
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+      <br>
+      
+        <div class="student_wise_att" *ngIf="visible">
+          <h5>CURRENT ATTENDANCE</h5>
+          <table border="1">
+            <tr>
+              <th>DATE</th>
+              <th>FIRST</th>
+              <th>SECOND</th>
+              <th>THIRD</th>
+              <th>FOURTH</th>
+              <th>FIFTH</th>
+              <th>PRESENT</th>
+              <th>ABSENT</th>
+            </tr>
+
+            <tr *ngFor="let obj of stud_att_list">
+                <td>{{obj.date}}</td>
+                <td [ngStyle]="{'background-color': obj.first ? 'white' : '	#EE82EE'}">{{obj.first ? 'P' : 'A'}}</td>
+                <td [ngStyle]="{'background-color': obj.second ? 'white' : '#EE82EE'}">{{obj.second ? 'P' : 'A'}}</td>
+                <td [ngStyle]="{'background-color': obj.third ? 'white' : '	#EE82EE'}">{{obj.third ? 'P' : 'A'}}</td>
+                <td [ngStyle]="{'background-color': obj.fourth ? 'white' : '#EE82EE'}">{{obj.fourth ? 'P' : 'A'}}</td>
+                <td [ngStyle]="{'background-color': obj.fifth ? 'white' : '	#EE82EE'}">{{obj.fifth ? 'P' : 'A'}}</td>
+                <td>{{obj.present}}</td>
+                <td>{{obj.absent}}</td>
+            </tr>
+
+          </table>
+          <h3>Attendance Percentage : <b>{{final_attendance|number: '1.2-2'}}%</b></h3>
+           
+
+            <table border="1" id="stats">
+              <tr>
+                <th>Total Present</th>
+                <th>Total Absent</th>
+                <th>Total Classes</th>
+              </tr>
+              <tr>
+                <td>{{total_present_count}}</td>
+                <td>{{total_absent_count}}</td>
+                <td>{{total_absent_count+total_present_count}}</td>
+              </tr>
+            </table>
+
+        </div>
+    
+</div>
+
+
+<div class="display" *ngIf="display">
+  <h6>ATTENDANCE - <b>{{search_date}}</b></h6>
+  <table>
+    
+    <tr>
+      <th>NAME</th>
+      <th>FIRST</th>
+      <th>SECOND</th>
+      <th>THIRD</th>
+      <th>FOURTH</th>
+      <th>FIFTH</th>
+      <th>PRESENT</th>
+      <th>ABSENT</th>
+    </tr>
+  </table>
+  <tr *ngFor="let obj of dates_obj_list">
+    <td id="name">{{obj.student}}</td>
+    <td [ngStyle]="{'background-color': obj.first_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.first_hour}}</td>
+                <td [ngStyle]="{'background-color': obj.second_hour=='P' ? 'white' : '#EE82EE'}">{{obj.second_hour}}</td>
+                <td [ngStyle]="{'background-color': obj.third_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.third_hour}}</td>
+                <td [ngStyle]="{'background-color': obj.fourth_hour=='P' ? 'white' : '#EE82EE'}">{{obj.fourth_hour}}</td>
+                <td [ngStyle]="{'background-color': obj.fifth_hour=='P' ? 'white' : '	#EE82EE'}">{{obj.fifth_hour}}</td>
+    <td>{{obj.present}}</td>
+    <td>{{obj.absent}}</td>
+    </tr>
+   
+ 
+</div>

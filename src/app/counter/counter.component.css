@@ -1,0 +1,17 @@
+.counter h1{
+
+  color:rgb(6, 66, 90); 
+  font-size:45px;
+  font-weight:bold;
+  font-family: poppins;
+  margin-top:30%;
+   
+}
+.counter{
+    
+    height:100px;
+    width:100px;
+    border:5px solid rgb(6, 66, 90); 
+    border-radius:50px;
+
+}

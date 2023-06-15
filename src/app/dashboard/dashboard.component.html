@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="title">
+        <h1>DASHBOARD</h1>
+    </div>
+   
+    <div class="graph">
+    <div class="departments">
+        <button class="btn" (click)="fetchData('6')">IT</button><br>
+        <button class="btn" (click)="fetchData('7')">CSE</button><br>
+        <button class="btn" (click)="fetchData('8')">ECE</button><br>
+        <button class="btn" (click)="fetchData('11')">EEE</button><br>
+        <button class="btn" (click)="fetchData('9')">MECH</button><br>
+        <button class="btn" (click)="fetchData('10')">CIVIL</button><br>
+    </div>
+    <div class="image-con" *ngIf="!visible">
+        <img id="image-vis" src="https://cdn.dribbble.com/users/8619169/screenshots/16116886/media/a63d64bcccad878cb9dfdb9a9f6b6416.gif">
+     </div>
+    <div class="graph-com" *ngIf="visible">
+        <canvas id="barChart"></canvas>
+    </div>
+    
+    </div>
+</div>

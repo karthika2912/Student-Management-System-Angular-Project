@@ -1,0 +1,96 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon>home</mat-icon>
+    </button>
+   
+    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <span class="menu-spacer"></span>
+    <div class="links">
+      <a mat-button (click)="navigateToSection2()"><mat-icon>info</mat-icon>About</a>
+      <a mat-button (click)="navigateToSection3()"><mat-icon>login</mat-icon>Login</a>  
+      <a mat-button (click)="navigateToSection4()"><mat-icon>phone</mat-icon>Contact</a>                                                                                                    
+    </div>
+  </mat-toolbar-row>
+  <router-outlet></router-outlet>
+</mat-toolbar>
+<body>
+ 
+  <div class="section-1">
+    <div class="image-content">
+      <img src="https://vananservices.com/blog/wp-content/uploads/2022/03/Online-learning.gif">
+    </div>
+    <div class="content">
+      <div class="welcome">
+        <h1>Welcome to Student Management System</h1>
+      </div>
+      <p>We are delighted to have you here. This system is designed to help you manage your academic journey effectively and stay organized. With our user-friendly features and comprehensive tools, you'll have everything you need at your fingertips.<br><br>Explore your student profile, access your courses, and keep track of your progress all in one place. Stay updated with important announcements, deadlines, and upcoming events. Our system provides a seamless experience to enhance your educational experience and empower your success.</p>
+    </div>
+    
+    </div>
+    <div #section2><br><br><br></div>
+    <div class="section-2">
+      <br>
+                                                                                           
+      <h1 id="about">ABOUT</h1>
+      <div class="inner-section">
+          <div class="dept">
+            <h3>STUDENTS</h3>
+            <img src="assets/stu-icon.png" class="dept-img">
+            <div class="spinner">
+            <app-counter [initialValue]='student_count'></app-counter>
+            </div>
+          </div>
+          <div class="dept">
+            <h3 id="course">COURSES</h3>
+            <img src="data:image/png;base64,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" class="dept-img">
+            <div class="spinner">
+            <app-counter [initialValue]="54"></app-counter>
+            </div>
+          </div>
+          <div class="dept">
+            <h3 id="deps">DEPARTMENTS</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnwY5OCmnrKSLqDcoEzDyqV_Q3ty1Ti_7pp28KbI7lRBkBUeotCWsaql-SjsUb5iE_io&usqp=CAU" class="dept-img">
+            <div class="spinner">
+            <app-counter [initialValue]="6"></app-counter>
+            </div>
+          </div>  
+    </div>                                                                                                                                                                
+    </div>  
+    <div  #section3></div>
+    <br><br><br>
+    <br><br>
+   <div class="section-3">
+                                                                          
+    <div class="section-inner">
+      <img src="https://www.godealergo.com/assets/images/secure-login.gif">
+    </div>
+    <br><br>
+    <app-login></app-login>
+   </div> 
+   <br>
+   <div class="section-4" #section4>
+    <div class="section-links">
+      <div class="test">
+        <mat-icon>phone</mat-icon> 
+        <p>+91 7893271283</p>
+      </div>
+      <div class="test">
+        <mat-icon>mail</mat-icon> 
+        <p>pappulakarthika123@gmail.com</p>
+      </div>
+      <div class="test">
+        <mat-icon>linkedin</mat-icon> 
+        <p>Karthika Pappula</p>
+      </div>
+      <div class="test">
+        <mat-icon>source-repository</mat-icon> 
+        <p>https://github.com/karthika2912</p>
+      </div>
+      
+    
+
+    </div>
+  </div>
+                                                                                                                                                           
+</body>

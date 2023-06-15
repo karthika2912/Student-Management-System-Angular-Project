@@ -1,0 +1,67 @@
+
+<div class="main">
+    <div class="title">
+        <h1>MARKS PAGE</h1>
+    </div>
+    <div class="combined">
+        
+        <div class="stu-list">
+           <h3 id="heading">Choose Student</h3>
+            <div class="inner-block" *ngFor="let obj of student_list">
+                <button class="stu-list-btn" (click)="loadCourses(obj.id)">{{obj.firstname|uppercase}}</button>
+                <button id="view" (click)="loadResults(obj.id)"><mat-icon>visibility</mat-icon></button>
+        </div>
+        </div>
+        <div class="image-con" *ngIf="!course_visible">
+            <img id="image-vis" src="https://cdn.dribbble.com/users/1079204/screenshots/15845625/media/a8f2ea854fc402d02f54c7fb35b83c93.gif">
+         </div>
+        <div class="course" *ngIf="course_visible">
+            
+            <div *ngFor="let course of course_list">
+                <button (click)="loadMarks(course)" class="course-btn" *ngIf="!temp_list.includes(course)">{{course}}</button>
+                
+            </div>
+        </div>
+        <div class="marks" *ngIf="visible">
+            <h3>{{selected_course|uppercase}}</h3>
+            <div class="form">
+            <form [formGroup]="marksForm" (ngSubmit)="onSubmit()" >
+
+                <br>
+                <label>Enter Sessional Marks : </label>
+                <input type="number" max="40" min="0" formControlName="sessional"><br>
+                <label>Enter External Marks : </label>
+                <input type="number" max="60" min="0" formControlName="external"><br><br>
+                <button>Submit</button>
+            
+            </form>
+            </div>
+
+        </div>
+        
+    </div>
+    <div class="results" *ngIf="res_visible">
+        <h2 id="marks-head">Marks Sheet</h2>
+        <table border="1">
+            <tr>
+                <th>Course Name</th>
+                <th>Sessional</th>
+                <th>External</th>
+                <th>Total</th>
+            </tr>
+            <tr *ngFor="let objs of result_list">
+                <td>{{objs.course}}</td>
+                <td>{{objs.sessional}}</td>
+                <td>{{objs.external}}</td>
+                <td>{{objs.sessional+objs.external}}</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>{{sessional_total}}</td>
+                <td>{{external_total}}</td>
+                <td>{{sessional_total+external_total}}</td>
+            </tr>
+        </table><br>
+        <h4>Percentage : <b>{{percentage}}%</b></h4>
+    </div>
+</div>
